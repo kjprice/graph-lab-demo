@@ -1,6 +1,6 @@
 ## GraphLab Recommendation System
 
-The purpose of this repository is to provide a real-world example to Graph Lab's recommendation system. Because we want a simplistic model for demonstration, we can use the [item-item recommender](https://turi.com/products/create/docs/generated/graphlab.recommender.item_similarity_recommender.create.html#graphlab.recommender.item_similarity_recommender.create). This demonstration will allow you to run the recommendation system locally, in a web browser. For a real production-ready environment, I would checkout the [Turi Predictive Services](https://turi.com/products/predictive-services/docs/index.html).
+The purpose of this repository is to provide a real-world example to Graph Lab's recommendation system. Because we want a simplistic model for demonstration, we can use the [item-item recommender](https://turi.com/products/create/docs/generated/graphlab.recommender.item_similarity_recommender.create.html#graphlab.recommender.item_similarity_recommender.create). This demonstration will allow you to run the recommendation system locally, in a web browser. This should not be used as a production environment. For a real production-ready environment, I would checkout the [Turi Predictive Services](https://turi.com/products/predictive-services/docs/index.html).
 
 We will use the Million Song Dataset Challenge provided by [kaggle](https://www.kaggle.com/c/msdchallenge#description).
 
