@@ -7,14 +7,14 @@ We will use the Million Song Dataset Challenge provided by [kaggle](https://www.
 ### Prerequisites
 
  - Install [nodejs](https://nodejs.org/en/download/)
- - Install [anacondas](https://www.continuum.io/downloads)
+ - Install [anacondaq](https://www.continuum.io/downloads)
  - Install [graphlab](https://turi.com/download/install-graphlab-create-command-line.html)
   - Be sure to create "`gl-env`" environment verbatim
 
 ### Setup
 
  - Clone this repository onto your machine
- - Download "kaggle_songs.txt" and "kaggle_visible_evaluation_triplets.zip", putting both files in [data](data) directory.
+ - Download "kaggle_songs.txt" and "kaggle_visible_evaluation_triplets.zip" [datasets](https://www.kaggle.com/c/msdchallenge/data), putting both files in [data](data) directory.
  - From within the root directory of the project, run `npm install` to install all of the nodejs dependencies
  - Use graphlab's conda environment: `source activate gl-env`.
  - Run `node app.js`.
