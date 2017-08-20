@@ -1,0 +1,1 @@
+data from kaggle goes in this directory https://www.kaggle.com/c/msdchallenge/data

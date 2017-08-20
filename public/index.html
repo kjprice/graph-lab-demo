@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Custom Recommendation</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+      a {
+        text-decoration: none;
+      }
+      ul {
+        padding: 0px;
+      }
+      li {
+        list-style: none;
+      }
+    </style>
+    <script>
+      function HtmlEncode(s)
+      {
+        return s.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;").replace(/'/g, "\\'");        
+      }
+      var socket = io();
+
+      function showRecommendations(recommendations) {
+        const output = recommendations.map(function (rec) {
+          return '<li><a href="javascript:void(0)" onclick="getRecommendations(\'' + HtmlEncode(rec.song_id) + '\')">' + rec.song_id + '</a></li>';
+        });
+
+        document.getElementById('recommendations').innerHTML = output.join('');
+      }
+
+      function getRecommendations(itemId) {
+        socket.emit('get-recommendations', itemId);
+      }
+
+      socket.on('recommendation', showRecommendations);
+      getRecommendations();
+</script>
+</head>
+  <body>
+    <ul id="recommendations">
+    </ul>
+  </body>
+</html>
